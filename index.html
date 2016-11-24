@@ -44,328 +44,131 @@
       <div class="slides">
         <section data-markdown>
           <script type="text/template">
-            # Una historia
-            ## sobre Clean Architecture con Ruby
+            # Devops: Desde las trincheras hasta los despachos
 
-            **Codemotion Spain 2016** <br/><br/>
-            @dani_latorre
-          </script>
-        </section>
+            <br/>
 
-        <section data-markdown>
-          <script type="text/template">
-            ## Sobre nosotros
-
-            * Equipo pequeño y multidisciplinar, a là *XP*
-            * Código sólido como una roca
-            * Una experiencia de usuario fuera de serie
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## ¿Qué hacemos?
-
-            * Desarrollo Web
-            * Aplicaciones Móviles
-            * UX y diseño
-            * Infraestructura y automatización
-            * Mentoring y formación
+            **  CAS 2016  **
+            <aside class="notes" data-markdown>
+            # Objetivo de la charla
+            En esta charla vamos a recordar el problema de hacer una entrega de software, vamos a despiezarlo y a proponer unas prácticas que encajan en el ámbito de Devops.  Analizaremos esas prácticas desde el punto de vista de los principios de Lean Software Development y uniremos este análisis con la economía de desarrollo de software, nos pondremos el sombrero de economistas y hablaremos de riesgo, time to market, coste, valor o deuda para finalmente comprobar que son rentables si las vemos desde el punto de vista del dinero.
+            </aside>
           </script>
         </section>
 
         <section data-markdown data-background-image="images/stones.png">
-        </section>
-
-        <section data-markdown>
           <script type="text/template">
-            ## Uno de nuestros proyectos
+            <aside class="notes" data-markdown>
+            ### Presentarnos.
+            Javi y Néstor
 
-            ![esPublico Conecta logos](images/espublico_conecta_logos.png)
+            ### Sobre los Coding Stones
+
+            - Equipo pequeño y multidisciplinar, a là *XP*
+            - Código sólido como una roca
+            - Una experiencia de usuario fuera de serie
+
+            ### ¿Qué hacemos?
+
+            - Desarrollo Web
+            - Aplicaciones Móviles
+            - UX y diseño
+            - Infraestructura y automatización
+            - Mentoring y formación
+
+            Chascarrillo de fin de la cuña publicitaria
+            </aside>
           </script>
         </section>
 
         <section data-markdown>
           <script type="text/template">
-            ## Uno de nuestros proyectos
+            ## Dejad que os contemos una historia ...
+          </script>
+        </section>
 
-            * Aplicación de gestión para AAPP
-            * Evolución de producto a 5 años vista
-            * Escalabilidad a nivel de código
-            * Escalabilidad a nivel de usuarios
-            * API
+        <section data-markdown data-background-image="images/vampire.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+            ### Por un lado tenemos a los vampiros
+
+            Y Los desarrolladores son como los vampiros
+
+            - Frecuentemente están despiertos por la noche (chascarrillo: como Dani Latorre)
+            - Pálidos como la muerte
+            - Y generalmente temen exponerse a la luz del día (chascarrillo: y se ven obligados a llevar una doble vida J2EE de día, NodeJS por la noche)
+            - Y sí, también piensan que ellos, o que al menos su código es inmortal
+
+            </aside>
+          </script>
+        </section>
+
+
+        <section data-markdown data-background-image="images/werewolf.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+            ### Por otro lado tenemos a los hombres lobos
+
+            Y los administradores de sistemas son como hombres lobos
+
+            - Por fuera parecen ordinarios, pero son increiblemente fuertes (chascarrillo: sí, también somos peluditos!)
+            - Son casi invulnerables a todo aquello que podría matar a una persona normal
+            - Y sufren extrañas transformaciones durante un - corte de servicio - en las noches de luna llena
+            </aside>
+          </script>
+        </section>
+
+        <section data-markdown data-background-image="images/vampire_werewolf_fight_by_mindsiphon.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+            ### Es una de las guerras mas antiguas y épicas desde la época oscura del desarrollo (chascarrillo: Y no suele tener la pinta que en las pelis de Eclipse)
+
+            Pese a que está llegando a su ocaso, he trabajado en bastante empresas en las que estas dos facciones estaban continuamente peleando de alguna manera u otra.
+
+            Con ataques tipicos de:
+
+            - En mi máquina funciona (chascarrillo: pues cierra el correo que se la voy a dar al cliente ...)
+            - Tenemos que estar una versión por detrás de lo que sea ahora estable (chascarrillo: con todos esos exploits ya abiertos, por supuesto ...)
+
+            Para poder comprenderla hay que apreciar que tanto los administradores de sistemas como los programadores tienen poderes sobrenaturales diferentes y, en nuestra opinión, complementarios.
+            </aside>
+          </script>
+        </section>
+
+        <section data-markdown data-background-image="images/hacer_software_es_dificil.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+
+            No nos engañemos más, desarrollar software es complejo, a veces incluso frustrante
+            </aside>
           </script>
         </section>
 
         <section data-markdown>
           <script type="text/template">
-            ![Propuesta](images/propuesta_arquitectura.jpg)
+            #### *Individuals and interactions* over processes and tools
+            #### *Working software* over comprehensive documentation
+            #### *Customer collaboration* over contract negotiation
+            #### *Responding to change* over following a plan
+
+            <aside class="notes" data-markdown>
+            ¿Y si nos hemos olvidado de esto?
+
+            ¿Y si nos hemos metido en un cenagal de procesos, de scrum de libro, de scrot, de certificaciones y de talleres con lego y no somos capaces de entregar software que funciona?
+
+            ¿Y sabeis lo peor de todo?
+            </aside>
           </script>
         </section>
 
-        <section data-markdown>
+        <section data-markdown data-background-image="images/propuesta_arquitectura.jpg">
           <script type="text/template">
-            ## Que empiece el baile!
-```
-$ rails new awesome-project
-$ cd awesome-project
-$ rails start
-```
+            <aside class="notes" data-markdown>
+            Que hasta que no está en producción, no sirve absolutamente de nada. Superadlo (silencio largo).
+
+            Historia de que esta imagen fue lo que les enviamos a conecta, un proyecto.
+            </aside>
           </script>
-        </section>
-
-        <section data-markdown data-background-image="images/fuck_you.jpg">
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## El framework web es un *puto* detalle
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## La base de datos *no* es el centro del universo
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ![Database in the Middle](images/database.jpg)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Arquitectura
-
-            ### Model-View-Controller
-          </script>
-        </section>
-
-        <section data-markdown data-background-image="images/Cecilia-Braekhus.jpg">
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## ~~Arquitectura~~
-            ## Patrón
-
-            ### Model-View-Controller
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Delivery Mechanism
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Deuda Técnica
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Una buena arquitectura:
-
-            * Permite *diferir* las decisiones potencialmente dolorosas
-            * Maximiza el número de *decisiones no tomadas*
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Decisiones de nuestra "arquitectura"
-
-            * Clean Architecture / Hexagonal Architecture
-            * Domain-Driven Design
-            * Multitenancy
-            * Stateless
-            * Sharding
-            * Single Page Interface
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ![Hexagonal Architecture](images/hexagonal_architecture.jpg)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ![Clean Architecture](images/clean_architecture.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Domain-Driven Design
-
-            * Strategic
-              * Ubiquitous Language
-            * Tactical
-              * Application Services
-              * Entities
-              * Value Objects
-              * Domain Services
-              * Repositories
-              * Domain Events
-              * Aggregates
-          </script>
-        </section>
-
-        <section data-markdown data-background-image="images/meh.jpg">
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Ruby Gem / Webapp
-            ![Ruby Gem](images/conecta-gem.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Conecta Gem
-            ### Core Domain + Use Cases + Adapters
-
-            ![Organización](images/conecta-gem-organization.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## ¿De que va la aplicación?
-            ![Acciones](images/conecta-gem-actions.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## ¿Qué hace la aplicación?
-            ![Acciones](images/conecta-gem-actions-code.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Interaction Driven Design
-
-            * Punto de entrada para descubrir el API
-            * TDD Outside-In (*London School*)
-            * Un action no puede llamar a otra
-            * Las actions **no** sustituyen a un servicio de dominio
-            * *Read model* puede hacer uso directo de Repositories
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Domain Model
-            ![Domain Model](images/conecta-aggregates.png)
-          </script>
-        </section>
-
-        <section data-markdown data-background-image="images/attention.jpg">
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## DI / Factories
-
-            <pre>
-            <code>
-            //Factory code
-            def add_a_message_for_issue_by_person_action
-              @add_a_message_for_issue ||= AddAMessageForIssueByPerson.new(
-                @repository_factory.issue_repository,
-                @repository_factory.person_repository,
-                @infrastructure_factory.clock)
-            end
-
-            //Client code
-            action = Conecta::API::FACTORY.add_a_message_for_issue_by_person_action
-
-            issue = action.run(institution_id, issue_id, person_id, content)
-
-
-
-            </code>
-            </pre>
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Data Transfer Object
-
-            ![DTO](images/dto.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Domain Payload Object
-
-            ![DPO](images/dpo.png)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Repositories
-
-            * *Diferir* decisiones
-            * En memoria a MySQL
-            * Sequel
-
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Sinatra a Grape
-
-            * Modularidad
-            * Validaciones
-            * Anidación de recursos
-            * Grape Entity
-            * Grape Swagger
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ## Infraestructura
-
-            * MySQL
-            * Rabbit MQ
-            * File Storage
-            * Push Notifications
-            * Emails
-            * SMSs
-            * Image Magick
-            * PDFKit
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Gems
-            * Rspec
-            * Factory Girl
-            * Bunny
-            * Warden
-            * JWT
-            * Mini Magick
-            * Faker
-          </script>
-        </section>
-
-        <section data-markdown data-background-image="images/yo_k_se_tio.gif">
         </section>
       </div>
     </div>
