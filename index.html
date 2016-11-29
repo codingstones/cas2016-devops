@@ -121,7 +121,7 @@
         <section data-markdown data-background-image="images/vampire_werewolf_fight_by_mindsiphon.jpg">
           <script type="text/template">
             <aside class="notes" data-markdown>
-            ### Es una de las guerras mas antiguas y épicas desde la época oscura del desarrollo (chascarrillo: Y no suele tener la pinta que en las pelis de Eclipse)
+            ### Es una de las guerras mas antiguas y épicas desde la época oscura del desarrollo (chascarrillo: Y no suele tener la pinta que en las pelis de Crepúsculo)
 
             Pese a que está llegando a su ocaso, he trabajado en bastante empresas en las que estas dos facciones estaban continuamente peleando de alguna manera u otra.
 
@@ -138,8 +138,15 @@
         <section data-markdown data-background-image="images/hacer_software_es_dificil.jpg">
           <script type="text/template">
             <aside class="notes" data-markdown>
+            No nos engañemos más, desarrollar software es complejo, a veces incluso frustrante.
 
-            No nos engañemos más, desarrollar software es complejo, a veces incluso frustrante
+            Pero tenemos otro problema aquí, como profesionales ¿cómo podemos hacer la entrega a los usuarios lo más rápido posible?
+
+            La ventaja competitiva sobre entregar lento es enorme.
+
+            Nos permite que cada funcionalidad llegue antes al cliente - menor Time To Market - y podemos aprender de ese comportamiento para iterar sobre nuestro producto.
+
+            Estamos en un momento de la industria en el que la tecnología se ha convertido en el proceso dominante de creación de valor, y a menudo en el medio principal de la adquisición de clientes en la mayoría de organizaciones.
             </aside>
           </script>
         </section>
@@ -156,19 +163,102 @@
 
             ¿Y si nos hemos metido en un cenagal de procesos, de scrum de libro, de scrot, de certificaciones y de talleres con lego y no somos capaces de entregar software que funciona?
 
-            ¿Y sabeis lo peor de todo?
+            Todas estas técnicas cubren *solamente una parte del flujo que entrega valor a la gente y a las organizaciones que nos pagan. ¿Estamos hablando de microoptimizaciones?
+
+            ¿Qué ocurre una vez que tenemos los requisitos identificados, las soluciones diseñadas, desarrolladas y testeas?
+            ¿Como juntamos todas estas técnicas para conseguir un proceso que sea confiable y eficiente?
+            Y lo más importante, ¿cómo habilitamos que los desarrolladores, los testers, la gente de operaciones y el negocio puedan trabajar de un modo eficaz?
             </aside>
           </script>
         </section>
 
+        <section data-markdown data-background-image="images/unicorn.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+            Siempre jode un montón que te hablen de las empresas grandes o startups donde a veces se hacen cosas que molen, y se escucha ese argumento triste de *Esto en el mundo real (tm) no funciona*
+
+            Si añadimos un cuerno a un caballo es cuando tenemos el unicornio:
+
+            - En 2009 Twitter era una aplicación ruby on rails
+            - En 2009 Facebook estaba saturado de fuegos en el area de operaciones
+            - En 2011 Linkedin tuvo que congelar la salida de nuevas funcionalidades hasta poner en orden su infraestructura
+
+            Todos los unicornios han sido caballos.
+
+            Otro dato muy interesante es que en 1958 la permanencia de una empresa en el fortune 500 era de 61 años. Hoy es de 16 años.
+
+            ¿Alguien sabe cual el orden de magnitud de la frecuencia de despliegue de Amazon?
+
+            | Empresa  | Frecuencia de deploy | Tiempo de ciclo de deploy |
+            |----------|----------------------|---------------------------|
+            | Amazon   | 23000 por día        | minutos                   |
+            | Google   | 5500 por día         | minutos                   |
+            | Netflix  | 500 por día          | minutos                   |
+            | Facebook | 1 por día            | horas                     |
+            | Twitter  | 3 por semana         | horas                     |
+
+            Hay algunos antipatrones que nos impiden bajar nuestro tiempo de ciclo de deploy.
+            </aside>
+          </script>
+        </section>
+
+        <section data-markdown data-background-image="images/tension_deploy.jpg">
+          <script type="text/template">
+            <aside class="notes" data-markdown>
+            El día de una release tiende a ser un día tenso.
+
+            ¿Por qué debería ser así?  Para la mayoría de proyectos es el grado de riesgo asociado con el proceso de release, lo que asusta.
+
+            Es manual.
+
+            El servidor / los servidores que en los que corre la aplicación es algo único, como un copo de nieve. Los artefactos se copian o se crean en el propio servidor, las configuraciones se crean a mano, e incluso algunos datos estáticos. Y después hay que arrancar cada pieza paso a paso.
+
+            Es algo absolutamente normal el tener nervios bajo esta circunstancia (chascarrillo: yo mismo lo estoy contando y estoy sintiendo sudores frios!) Hay muchas cosas que pueden ir mal en este proceso y  la aplicación no se va a ejecutar.
+            </aside>
+          </script>
+        </section>
+
+       <section data-markdown>
+          <script type="text/template">
+            # Desplegar software a mano
+            <aside class="notes" data-markdown>
+            </aside>
+          </script>
+        </section>
+
+       <section data-markdown>
+          <script type="text/template">
+            # Desplegar al final
+            <aside class="notes" data-markdown>
+            </aside>
+          </script>
+        </section>
+
+       <section data-markdown>
+          <script type="text/template">
+            # Gestión manual de los entornos de producción
+            <aside class="notes" data-markdown>
+            </aside>
+          </script>
+        </section>
+
+<!--
         <section data-markdown>
           <script type="text/template">
             ![Propuesta](images/propuesta_arquitectura.jpg)
 
             <aside class="notes" data-markdown>
-            Que hasta que no está en producción, no sirve absolutamente de nada. Superadlo (silencio largo).
+            Historia de que esta imagen fue lo que les enviamos a conecta, un proyecto. Tras haber cobrado la aceptación del proyecto, aún no sabemos lo que son las cajas naranjas!
 
-            Historia de que esta imagen fue lo que les enviamos a conecta, un proyecto.
+            Que hasta que no está en producción, no sirve absolutamente de nada. Superadlo (silencio largo). Done is production!
+            </aside>
+          </script>
+        </section>
+-->
+
+       <section data-markdown>
+          <script type="text/template">
+            <aside class="notes" data-markdown>
             </aside>
           </script>
         </section>
